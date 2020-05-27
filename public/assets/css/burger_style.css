@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
 }
 body {
     background-color: orange;
@@ -12,62 +11,28 @@ img {
     margin-left: 42%;
     height: 150px;
     width: 200px;
-
 }
-
 .header {
-    margin-left: 42%;
+    margin-left: 38%;
     margin-bottom: 5px;
     color: red;
     align-content: center;
-    
 }
 input {
-    margin-left: 70px;
-    height: 50px;
+    margin-left: 42%;
+    height: 80px;
     width: 200px;
     background-color: white;
 }
-
-.burgers-list {
-    margin-left: 15%;
-    float: left;
-    position: relative;
-}
-
-/* .devoured {
-    float: right; */
-    /* position: relative; */
-    /* margin-left: 25%;
-} */
-/* .devoured-list {
-    float: right;
-    position: relative;
-    margin-right: 15%;
-} */
-
-.create-form {
-    margin-left: 38%;
-    color: white;
-    align-content: center;
-    font-size: larger;   
-}
 .submitBtn {
-    background-color: blue;
-    color: white;
-    margin-left: 150px;
+    width: 70px;
+    height: 30px;
+    margin-left: 52%;
 }
 .addBurger {
     margin-left: 42%;
 }
-
-.form-group {
-    margin-bottom: 5px;
-}
-
-.change-devour {
-    width: 100px;
-    height: 20px;
-    color: red;
-    background-color: white;
-}
+/* .delete-burger {
+    width: 70px;
+    height: 60px;
+} */
