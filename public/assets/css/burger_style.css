@@ -2,9 +2,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
+}
+body {
     background-color: orange;
 }
-
 img {
     margin-top: 50px;
     margin-left: 42%;
@@ -33,11 +35,16 @@ input {
     position: relative;
 }
 
-.devoured {
+/* .devoured {
+    float: right; */
+    /* position: relative; */
+    /* margin-left: 25%;
+} */
+/* .devoured-list {
     float: right;
     position: relative;
     margin-right: 15%;
-}
+} */
 
 .create-form {
     margin-left: 38%;

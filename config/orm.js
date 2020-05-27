@@ -87,15 +87,21 @@ var orm = {
 
             cb(result);
         });
+    },
+    deleteOne: function (table, condition, cb) {
+        var queryString = "DELETE FROM " + table;
+        queryString += " WHERE ";
+        queryString += condition;
+
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+        });
     }
 };
-
-// create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
-
-//  `selectAll()`
-//  `insertOne()`
-//  `updateOne()`
-
 
 // Export the orm object for the model (cat.js).
 module.exports = orm;

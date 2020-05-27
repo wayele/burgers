@@ -2,52 +2,45 @@
 
 {{!-- Create a button in `index.handlebars` that will submit the user input into the database. --}}
 {{!-- <h1>Cats!</h1> --}}
-<img src="../assets/img/burger.jpg" alt="Burger pic">
-<h1 class="header">Eat-Da-Burger!</h1>
+<div class="container">
+    <img src="../assets/img/burger.jpg" alt="Burger pic">
+    <h1 class="header">Eat-Da-Burger!</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="burgers">Burgers List!</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
 
-{{!-- <h2 class="burgers">Burgers List!</h2> --}}
-
-<ul class="burgers-list">
-    <br>
-    {{#each burgers}}
-    <p>{{this.id}}</p>
-    <p>{{this.burger_name}}</p>
-    {{#unless devoured}}
-    {{> burgers/burger devoured=true}}
-    {{/unless}}
-    {{!-- <button data-id="{{this.id}}" class="devBtn">Devour!!</button> --}}
-    {{/each}}
-</ul>
-
-<h2 class="devoured">Devoured Burgers!</h2>
-
-<ul class"devoured">
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burger"></label>
-        <input type="text" id="burger" name="name">
+        <div class="col-md-6">
+            <h2>Devoured Burgers!</h2>
+            <ul class"devoured">
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-md-8">
+            <form class="create-form">
 
-    {{!-- <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
+                <div class="form-group">
+                    <label for="burger"></label>
+                    <input type="text" id="burger" name="name">
+                </div>
 
-    <button class="submitBtn" type="submit">Submit</button>
-</form>
-<br>
-<p class="addBurger">Add a new burger and click submit!</p>
+                <button class="submitBtn" type="submit">Submit</button>
+            </form>
+            <br>
+            <p class="addBurger">Add a new burger and click submit!</p>
+        </div>
+    </div>
+</div>
